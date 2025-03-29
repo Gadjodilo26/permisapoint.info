@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Permis à Points - Ressources Utiles</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <a href="#"><img src="logo.png" alt="Logo Permis à Points"></a>
+    </div>
+    <nav id="main-nav">
+      <ul class="menu">
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#">Ressources</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Bouton pour le menu mobile -->
+    <div class="menu-toggle" id="mobile-menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- CONTENU PRINCIPAL -->
+  <div class="container">
+    <aside id="sidebar">
+      <h3>Navigation rapide</h3>
+      <ul>
+        <li><a href="#infos-officielles">Infos officielles</a></li>
+        <li><a href="#stages">Stages de récupération</a></li>
+        <li><a href="#avocats">Avocats spécialisés</a></li>
+        <li><a href="#reglementation">Réglementation</a></li>
+      </ul>
+    </aside>
+
+    <main>
+      <section class="fade-section">
+        <h1>Ressources utiles pour les détenteurs du permis à points</h1>
+        <p>Trouvez ci-dessous une sélection de liens vers des informations et services essentiels pour gérer votre permis à points.</p>
+      </section>
+
+      <section id="infos-officielles" class="fade-section">
+        <h2>Informations officielles et services en ligne</h2>
+        <ul>
+          <li><a href="https://www.service-public.fr/particuliers/vosdroits/R17121">Consulter et télécharger les infos du permis</a></li>
+          <li><a href="https://mespoints.permisdeconduire.gouv.fr/bienvenue">Mes points permis</a></li>
+        </ul>
+      </section>
+
+      <section id="stages" class="fade-section">
+        <h2>Stages de récupération de points</h2>
+        <ul>
+          <li><a href="https://www.automobile-club.org/recuperation-de-points">Automobile Club Association</a></li>
+          <li><a href="https://www.legipermis.com/stage-recuperation-points/">LegiPermis</a></li>
+          <li><a href="https://www.actiroute.com">ActiROUTE</a></li>
+          <li><a href="https://www.ecf.asso.fr/Les-formations/Stage-de-recuperation-de-points/Deroulement-du-stage-de-recuperation-de-points">ECF</a></li>
+        </ul>
+      </section>
+
+      <section id="avocats" class="fade-section">
+        <h2>Avocats spécialisés en droit routier</h2>
+        <ul>
+          <li><a href="https://maitredufour.com/infractions-routieres-3/">Maître Dufour</a></li>
+          <li><a href="https://www.avocat-spira.fr">Maître Spira</a></li>
+        </ul>
+      </section>
+
+      <section id="reglementation" class="fade-section">
+        <h2>Réglementation et conseils</h2>
+        <ul>
+          <li><a href="https://www.francestagepermis.fr/stage-recuperation-points/permis-conduire/">France Stage Permis</a></li>
+          <li><a href="https://www.service-public.fr/particuliers/vosdroits/F14208">Service Public - Stages volontaires</a></li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Permis à Points. Tous droits réservés.</p>
+    <div class="footer-links">
+      <a href="#">Mentions légales</a>
+      <a href="#">Politique de confidentialité</a>
+    </div>
+  </footer>
+
+  <!-- Bouton Retour en haut -->
+  <button id="back-to-top">↑</button>
+
+  <!-- JAVASCRIPT -->
+  <script src="https://static.elfsight.com/platform/platform.js" async></script>
+  <script>
+    // Activation du menu mobile
+    const menuToggle = document.getElementById("mobile-menu-toggle");
+    const mainNav = document.getElementById("main-nav");
+    menuToggle.addEventListener("click", function() {
+      mainNav.classList.toggle("active");
+      menuToggle.classList.toggle("open");
+    });
+
+    // Effet de fondu lors du défilement
+    document.addEventListener("DOMContentLoaded", function() {
+      const faders = document.querySelectorAll(".fade-section");
+      const appearOptions = {
+        threshold: 0.2,
+        rootMargin: "0px 0px -50px 0px"
+      };
+      const appearOnScroll = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        });
+      }, appearOptions);
+      faders.forEach((fader) => appearOnScroll.observe(fader));
+    });
+
+    // Bouton "Retour en haut"
+    window.addEventListener("scroll", function() {
+      const backToTopBtn = document.getElementById("back-to-top");
+      backToTopBtn.style.display = window.pageYOffset > 300 ? "block" : "none";
+    });
+    document.getElementById("back-to-top").addEventListener("click", function() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+</body>
+</html>
+

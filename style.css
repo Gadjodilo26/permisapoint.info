@@ -1,0 +1,581 @@
+/* ============================ */
+/*          VARIABLES           */
+/* ============================ */
+/* Variables CSS pour faciliter la maintenance et la modification du style */
+:root {
+  /* Polices et couleurs de base */
+  --font-family: 'Roboto', sans-serif;
+  --background-color: #fafafa;
+  --text-color: #000;
+
+  /* Couleurs principales */
+  --primary-color: #c95d8a;
+  --primary-hover: #a94468;
+  
+  /* Couleurs pour l'entête et le footer */
+  --header-bg-start: #000;
+  --header-bg-end: #222;
+  --header-text: #fff;
+  --footer-bg: #000;
+  --footer-text: #fff;
+
+  /* Couleurs pour les titres */
+  --h1-color: #d63384;
+  --h2-color: #007bff;
+  --h3-color: #28a745;
+  --h4-color: #ffc107;
+
+  /* Couleurs pour les tableaux */
+  --table-bg: #f2f2f2;
+
+  /* Boutons */
+  --btn-bg: #c95d8a;
+  --btn-hover-bg: #a94468;
+
+  /* Sidebar */
+  --sidebar-bg: #fff;
+  --sidebar-border: #ccc;
+  
+  /* Style des sections pour plus de relief */
+  --section-bg: #ffffff;
+  --section-border: #e0e0e0;
+  --section-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================ */
+/*          RESET & BASE        */
+/* ============================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Marge de base pour les sections */
+.section {
+  margin: 0 10px;
+}
+
+/* ============================ */
+/*            LOGO              */
+/* ============================ */
+.logo img {
+  padding: 9px;
+  max-height: 50px;
+}
+
+/* ============================ */
+/*       Liens & Paragraphes    */
+/* ============================ */
+p {
+  margin-bottom: 1.5rem;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+/* ============================ */
+/*        Effet de Fondu        */
+/* ============================ */
+/* Ajout d'un fond, padding, marge et ombre pour plus de relief entre les sections */
+.fade-section {
+  width: 95%;
+  background-color: var(--section-bg);
+  padding: 2rem;
+  margin: 2rem 0;
+  border: 1px solid var(--section-border);
+  border-radius: 8px;
+  box-shadow: var(--section-shadow);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================ */
+/*            Titres            */
+/* ============================ */
+h1 {
+  font-size: 3em;
+  color: var(--h1-color);
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  font-size: 2em;
+  color: var(--h2-color);
+  margin-top: 20px;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.75em;
+  color: var(--h3-color);
+  margin-top: 20px;
+  margin-bottom: 0.75rem;
+}
+
+h4 {
+  font-size: 1.5em;
+  color: var(--h4-color);
+  margin-bottom: 0.75rem;
+}
+
+/* ============================ */
+/*       Header & Menu          */
+/* ============================ */
+header {
+  background: linear-gradient(90deg, var(--header-bg-start), var(--header-bg-end));
+  padding: 0.5rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo a {
+  color: var(--header-text);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Menu principal centré */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ol, ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+ul.menu {
+  display: flex;
+  gap: 1rem;
+}
+
+ul.menu > li {
+  position: relative;
+}
+
+ul.menu > li > a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--header-text);
+}
+
+/* Sous-menu dropdown */
+ul.menu li ul.dropdown {
+  padding: 0.5rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid var(--sidebar-border);
+  width: 220px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+  z-index: 100;
+}
+
+ul.menu li:hover > ul.dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+ul.menu li ul.dropdown li a {
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+  display: block;
+}
+
+/* ============================ */
+/*        Menu Mobile           */
+/* ============================ */
+.menu-toggle {
+  /* On masque le menu hamburger sur mobile */
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: var(--header-text);
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+.menu-toggle.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ============================ */
+/*           Sidebar            */
+/* ============================ */
+#sidebar {
+  width: 220px;
+  background: var(--sidebar-bg);
+  padding: 1rem;
+  border-right: 1px solid var(--sidebar-border);
+  position: sticky;
+  top: 4rem;
+  height: calc(100vh - 4rem);
+}
+
+#sidebar h3 {
+  margin-bottom: 0.75rem;
+}
+
+#sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+#sidebar ul li {
+  margin-bottom: 0.5rem;
+}
+
+#sidebar ul li a {
+  display: block;
+  padding: 0.5rem;
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: 3px;
+  transition: background 0.3s ease;
+}
+
+#sidebar ul li a:hover {
+  background: var(--primary-hover);
+}
+
+/* ============================ */
+/*      Layout: Sidebar + Main  */
+/* ============================ */
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 2rem auto;
+  gap: 1.5rem;
+  padding: 0 20px;
+}
+
+main {
+  flex: 1;
+}
+
+/* ============================ */
+/*           Tableaux           */
+/* ============================ */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+
+table, th, td {
+  border: 1px solid var(--sidebar-border);
+}
+
+th, td {
+  padding: 0.75rem;
+  text-align: left;
+}
+
+th {
+  background-color: var(--table-bg);
+}
+
+/* ============================ */
+/*           Boutons            */
+/* ============================ */
+.boutique-btn,
+.solde-btn {
+  display: inline-block;
+  background-color: var(--btn-bg);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1.1em;
+  margin: 1rem 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.boutique-btn:hover,
+.solde-btn:hover {
+  background-color: var(--btn-hover-bg);
+  color: #000;
+}
+
+/* ============================ */
+/*           Footer             */
+/* ============================ */
+footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 20px;
+}
+
+footer a {
+  color: var(--footer-text);
+  margin: 0 5px;
+  font-size: 1.2em;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+/* ============================ */
+/*      Bouton Retour en Haut   */
+/* ============================ */
+#back-to-top {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  display: none;
+  transition: opacity 0.3s ease;
+}
+
+#back-to-top:hover {
+  background: var(--primary-hover);
+}
+
+/* Centrage horizontal responsive du conteneur PayPal */
+#paypal-container-KCVKV43WZWW44 {
+  display: inline-block;
+  max-width: 80%;
+}
+
+/* S'assurer que le parent aligne son contenu au centre */
+#paypal-container-KCVKV43WZWW44-wrapper {
+  text-align: center;
+  width: 100%;
+}
+
+.elfsight-app-7b3b3b7b-7b3b-4b3b-8b3b-7b3b3b7b3b3b {
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* ============================ */
+/*    Conteneur Responsive      */
+/* ============================ */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 15px;
+}
+
+/* ============================ */
+/*  Sticky CTA pour l'éthylotest */
+/* ============================ */
+#sticky-ethylotest {
+  position: fixed;
+  top: 10%;
+  right: 20px;
+  width: 250px;
+  background-color: var(--section-bg);
+  border: 1px solid #ddd;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+  text-align: center;
+}
+
+#sticky-ethylotest img {
+  width: auto;
+  height:150px;
+  
+  margin-bottom: 10px;
+}
+
+
+
+
+/* ============================ */
+/*          Responsive          */
+/* ============================ */
+@media (max-width: 1024px) {
+  /* Ajustements de typographie ou marges si souhaité */
+ #sticky-ethylotest {
+    width: 150px;
+    top: 60%;
+    right:20px;
+    height: 300px;
+  }
+  #sticky-ethylotest img {
+    width: auto;
+    height: 100px;
+    
+    margin-bottom: 10px;
+  }
+  header {
+   display: none
+  }
+  body, p {
+    text-align: justify;
+  }
+  body {
+    font-size: 0.7em;
+   
+    max-width: 100%;
+  }
+  .fade-section {
+    top: 500px;
+    font-size: 1.2em;
+    justify-content: center;
+   margin: auto;
+    width: 95%;
+    margin-bottom: 10px;
+    
+    
+  }
+  .container {
+    padding: 0;
+    flex-direction: column;
+  }
+  #sidebar {
+    text-align: center;
+    width: 100%;
+    font-size: 0.6em;
+    border-right: none;               /* On retire la bordure à droite */
+    border-bottom: 1px solid var(--sidebar-border); /* On ajoute une bordure inférieure */
+    position: sticky;
+    top: 0;
+    height: auto;
+    padding: 0.5rem;                  /* Ajustement du padding pour une barre plus compacte */
+    
+    /* Passage en mode horizontal */
+    display: inline;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 1000;    /* Répartit les éléments sur toute la largeur */
+  }
+  #sidebar h3 {
+    display: none;
+  }
+  #sidebar ul {
+    display: flex;
+    gap: 0.35rem;
+    justify-content: center;
+    width: 100%;
+  }  
+  #sidebar ul li {
+    margin: 0;
+  }
+   /* Réduction de la taille de police dans les tableaux */
+   table, th, td {
+    font-size: 0.8em;
+  }
+  .footer {
+    font-size: 1.5em;
+  z-index: 2000;
+  }
+  /* Réduction de la taille des images pour mieux s'adapter à l'écran mobile */
+  img {
+    max-width: 90%;
+  }
+  
+  /* Conserver la disposition horizontale du menu */
+  ul.menu {
+    flex-direction: row;
+    gap: 1rem;
+    width: auto;
+  }
+  
+  ul.menu > li > a {
+    padding: 0.5rem 1rem;
+  }
+  ul.menu li ul.dropdown li a {
+    padding: 0.5rem 1rem;
+  }
+  
+  /* La sidebar reste visible en mobile, on ne masque pas #sidebar */
+  
+  /* Masquer le menu hamburger */
+  .menu-toggle {
+    display: none;
+  }
+  
+  /* Rétablissement des tailles de titres (identiques au desktop) */
+  h1 {
+    font-size: 1.6em;
+  }
+  h2 {
+    font-size: 1.3em;
+    text-align: left;
+    margin: 1rem 0;
+  }
+  h3 {
+    font-size: 1em;
+  }
+  
+  /* Prévenir le débordement en forçant le rétrécissement si besoin */
+  .container, #sidebar, main {
+    flex-shrink: 1;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    padding: 0 20px;
+  }
+  ul.menu > li > a {
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 1024px) {
+  #sticky-ethylotest {
+    
+    top: 10%;
+   
+  }
+}
