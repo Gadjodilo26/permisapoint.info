@@ -1,412 +1,601 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Meta description optimisée pour le SEO -->
-  <meta name="description" content="Découvrez le permis à point en 2025 en France, ses règles, astuces et sanctions renforcées. Informez-vous sur les situations du permis classique et probatoire, la reconstitution du capital de points, et bien plus encore.">
-  <!-- Favicon -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <!-- Google Fonts: Roboto -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Font Awesome pour les icônes -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <title>Le permis à point en 2025 en France</title>
-  <!-- Fichier CSS externe -->
-  <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-  <!-- HEADER -->
-  <header>
-    <div class="logo">
-      <a href="#"><img src="./image_permis_de_conduire.png" alt="Logo du permis de conduire"></a>
-    </div>
-   
-    <!-- Bouton menu mobile -->
-    <div class="menu-toggle" id="mobile-menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Meta description optimisée pour le SEO -->
+    <meta
+      name="description"
+      content="Découvrez le permis à point en 2025 en France, ses règles, astuces et sanctions renforcées. Informez-vous sur les situations du permis classique et probatoire, la reconstitution du capital de points, et bien plus encore."
+    />
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <!-- Google Fonts: Roboto -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome pour les icônes -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <title>Le permis à point en 2025 en France</title>
+    <!-- Fichier CSS externe -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="logo">
+        <a href="#"
+          ><img src="./logo.png" alt="Logo du permis de conduire"
+        /></a>
+      </div>
 
-  <!-- LAYOUT : SIDEBAR + MAIN -->
-  <div class="container">
-    <!-- SIDEBAR -->
-    <aside id="sidebar">
-      <h3>Navigation</h3>
-      <ul>
-        <li><a href="#fonctionnement">Combien de points?</a></li>
-        <li><a href="#bareme">Combien puis-je en perdre?</a></li>
-        <li><a href="#montant">Combien ça coûte?</a></li>
-        <li><a href="#contestations">Pourquoi contester?</a></li>
-        <li><a href="#annulation">Si je perds mon permis?</a></li>
-        <li><a href="#recuperation">Quand vais-je récupérer mes points?</a></li>
-        <li><a href="#solde">Solde de points</a></li>
-      </ul>
-    </aside>
+      <!-- Bouton menu mobile -->
+      <div class="menu-toggle" id="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
 
-    <!-- CONTENU PRINCIPAL -->
-    <main>
-      <!-- INTRODUCTION -->
-      <section id="introduction" class="fade-section">
-        <h1>Permis à Points en 2025 en France</h1>
-        <picture>
-          <source media="(max-width: 768px)" srcset="../img/permis-dematerialise.jpg">
-          <source media="(min-width: 769px)" srcset="../img/permis-dematerialise.jpg">
-          <img src="./permis-dematerialise.jpg" alt="Illustration Introduction" style="width: 100%; height: auto">
-        </picture>
-        <p>Bienvenue sur notre site dédié au permis à points. Ici, vous trouverez toutes les informations essentielles pour comprendre son fonctionnement, les sanctions encourues et les stratégies pour préserver votre permis.</p>
-      </section>
-
-      <!-- FONCTIONNEMENT ET CAPITAL -->
-      <section id="fonctionnement" class="fade-section">
-        <h2>Fonctionnement et Capital</h2>
-        <p>Le permis à points repose sur un système incitatif : un capital de points attribué dès l'obtention du permis, qui diminue en cas d'infraction et se reconstitue progressivement.</p>
-        <h3>🔹 Capital initial de points</h3>
+    <!-- LAYOUT : SIDEBAR + MAIN -->
+    <div class="container">
+      <!-- SIDEBAR -->
+      <aside id="sidebar">
+        <h3>Navigation</h3>
         <ul>
-          <li><strong>Permis (voiture, moto, poids lourd) :</strong> 12 points maximum.</li>
-          <li><strong>Période probatoire :</strong> Démarrage à 6 points, avec progression vers 12 points sous réserve de ne pas commettre d'infraction (3 ans pour la formation traditionnelle, 2 ans pour la conduite accompagnée).</li>
-        </ul>
-        <h3>🔹 Reconstitution progressive</h3>
-        <ul>
-          <li><strong>Formation traditionnelle :</strong>
-            <ul>
-              <li>Après 1 an sans infraction : +2 points (8 points au total)</li>
-              <li>Après 2 ans : +2 points (10 points au total)</li>
-              <li>Après 3 ans : +2 points (12 points au total)</li>
-            </ul>
+          <li><a href="#fonctionnement">Combien de points?</a></li>
+          <li><a href="#bareme">Combien puis-je en perdre?</a></li>
+          <li><a href="#montant">Combien ça coûte?</a></li>
+          <li><a href="#contestations">Pourquoi contester?</a></li>
+          <li><a href="#annulation">Si je perds mon permis?</a></li>
+          <li>
+            <a href="#recuperation">Quand vais-je récupérer mes points?</a>
           </li>
-          <li><strong>Conduite accompagnée :</strong>
-            <ul>
-              <li>Après 1 an sans infraction : +3 points (9 points au total)</li>
-              <li>Après 2 ans : +3 points (12 points au total)</li>
-            </ul>
-          </li>
+          <li><a href="#solde">Solde de points</a></li>
         </ul>
-      </section>
+      </aside>
 
-      <!-- INFRACTIONS ET PERTE DE POINTS -->
-      <section id="bareme" class="fade-section">
-        <h2>Infractions et Perte de Points</h2>
-        <p>Les infractions relevées par les contrôles, radars ou vidéo-verbalisation entraînent un retrait de points.</p>
-        <h3>🔹 Retraits par infraction</h3>
-        <ul>
-          <li>Retrait de 1 à 6 points selon la gravité.</li>
-          <li>Maximum de 8 points retirés en cas de cumul d'infractions.</li>
-        </ul>
-        <h3>🔹 Barème des retraits</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Infraction</th>
-              <th>Retrait de points</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Excès de vitesse &lt; 20 km/h</td>
-              <td>1 point</td>
-            </tr>
-            <tr>
-              <td>Excès de vitesse 20-29 km/h</td>
-              <td>2 points</td>
-            </tr>
-            <tr>
-              <td>Excès de vitesse 30-39 km/h</td>
-              <td>3 points</td>
-            </tr>
-            <tr>
-              <td>Excès de vitesse 40-49 km/h</td>
-              <td>4 points + suspension</td>
-            </tr>
-            <tr>
-              <td>Excès de vitesse &gt; 50 km/h</td>
-              <td>6 points + suspension</td>
-            </tr>
-            <tr>
-              <td>Téléphone en main au volant</td>
-              <td>3 points</td>
-            </tr>
-            <tr>
-              <td>Non-respect d'un feu rouge ou stop</td>
-              <td>4 points</td>
-            </tr>
-            <tr>
-              <td>Non-port de la ceinture</td>
-              <td>3 points</td>
-            </tr>
-            <tr>
-              <td>Refus de priorité piéton</td>
-              <td>6 points</td>
-            </tr>
-            <tr>
-              <td>Conduite sous alcool (0,5 à 0,8 g/L)</td>
-              <td>6 points + suspension/annulation</td>
-            </tr>
-            <tr>
-              <td>Conduite sous stupéfiants</td>
-              <td>6 points + suspension/annulation</td>
-            </tr>
-            <tr>
-              <td>Dépassement dangereux</td>
-              <td>3 points</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
+      <!-- CONTENU PRINCIPAL -->
+      <main>
+        <!-- INTRODUCTION -->
+        <section id="introduction" class="fade-section">
+          <h1>Permis à Points en 2025 en France</h1>
+          <picture>
+            <source
+              media="(max-width: 768px)"
+              srcset="./permis-dematerialise.jpg"
+            />
+            <source
+              media="(min-width: 769px)"
+              srcset="./permis-dematerialise.jpg"
+            />
+            <img
+              src="./permis-dematerialise.jpg"
+              alt="Illustration Introduction"
+              style="width: 100%; height: auto"
+            />
+          </picture>
+          <p>
+            Préservez votre permis ! Découvrez tout ce qu'il faut savoir sur le
+            permis à points : fonctionnement, sanctions et astuces pratiques
+            pour éviter les pièges. Roulez serein !
+          </p>
+        </section>
 
-      <!-- MONTANTS DES AMENDES -->
-      <section id="montant" class="fade-section">
-        <h2>Montants des Amendes et Délais de Paiement</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Classe</th>
-              <th>Type</th>
-              <th>Montant minoré</th>
-              <th>Montant forfaitaire</th>
-              <th>Montant majoré</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1<sup>ère</sup> classe</td>
-              <td>Stationnement</td>
-              <td>11 €</td>
-              <td>17 €</td>
-              <td>33 €</td>
-            </tr>
-            <tr>
-              <td>2<sup>ème</sup> classe</td>
-              <td>Clignotants, Assurances, Péages</td>
-              <td>22 €</td>
-              <td>35 €</td>
-              <td>75 €</td>
-            </tr>
-            <tr>
-              <td>3<sup>ème</sup> classe</td>
-              <td>Excès de vitesse &lt; 20 km/h, Problèmes de freins</td>
-              <td>45 €</td>
-              <td>68 €</td>
-              <td>180 €</td>
-            </tr>
-            <tr>
-              <td>4<sup>ème</sup> classe</td>
-              <td>Toutes autres infractions</td>
-              <td>90 €</td>
-              <td>135 €</td>
-              <td>375 €</td>
-            </tr>
-            <tr>
-              <td>5<sup>ème</sup> classe</td>
-              <td>Excès de vitesse &gt; 50 km/h</td>
-              <td>N/A</td>
-              <td>Décision du tribunal</td>
-              <td>N/A</td>
-            </tr>
-          </tbody>
-        </table>
-        <p>Délais de paiement : minoré sous 15 jours (30 jours en ligne), forfaitaire entre 16 et 45 jours et majoré après 60 jours.</p>
-      </section>
+        <!-- FONCTIONNEMENT ET CAPITAL -->
+        <section id="fonctionnement" class="fade-section">
+          <h2>Fonctionnement et Capital</h2>
+          <p>
+            Le permis à points repose sur un système incitatif : un capital de
+            points attribué dès l'obtention du permis, qui diminue en cas
+            d'infraction et se reconstitue progressivement.
+          </p>
+          <h3>🔹 Capital initial de points</h3>
+          <ul>
+            <li>
+              <strong>Permis (voiture, moto, poids lourd) :</strong> 12 points
+              maximum.
+            </li>
+            <li>
+              <strong>Période probatoire :</strong> Démarrage à 6 points, avec
+              progression vers 12 points sous réserve de ne pas commettre
+              d'infraction (3 ans pour la formation traditionnelle, 2 ans pour
+              la conduite accompagnée).
+            </li>
+          </ul>
+          <h3>🔹 Reconstitution progressive</h3>
+          <ul>
+            <li>
+              <strong>Formation traditionnelle :</strong>
+              <ul>
+                <li>
+                  Après 1 an sans infraction : +2 points (8 points au total)
+                </li>
+                <li>Après 2 ans : +2 points (10 points au total)</li>
+                <li>Après 3 ans : +2 points (12 points au total)</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Conduite accompagnée :</strong>
+              <ul>
+                <li>
+                  Après 1 an sans infraction : +3 points (9 points au total)
+                </li>
+                <li>Après 2 ans : +3 points (12 points au total)</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
 
-      <!-- CONTESTATIONS -->
-      <section id="contestations" class="fade-section">
-        <h2>Contestations et Stratégies</h2>
-        <p>Contester une infraction permet de retarder le retrait effectif des points, laissant le temps de suivre un stage de récupération.</p>
-        <h3>🔹 Délais pour contester</h3>
-        <ul>
-          <li>45 jours pour contester une infraction après réception de l'avis.</li>
-          <li>30 jours pour contester une amende majorée.</li>
-        </ul>
-        <h3>🔹 Stratégies efficaces</h3>
-        <ul>
-          <li>Suivre un stage de récupération pour regagner jusqu'à 4 points.</li>
-          <li>Adopter une conduite exemplaire afin de récupérer naturellement des points sur 3 ans.</li>
-          <li>Contester permet parfois de gagner entre 4 et 6 mois avant que le retrait ne soit effectif.</li>
-        </ul>
-      </section>
+        <!-- INFRACTIONS ET PERTE DE POINTS -->
+        <section id="bareme" class="fade-section">
+          <h2>Infractions et Perte de Points</h2>
+          <p>
+            Les infractions relevées par les contrôles, radars ou
+            vidéo-verbalisation entraînent un retrait de points.
+          </p>
+          <h3>🔹 Retraits par infraction</h3>
+          <ul>
+            <li>Retrait de 1 à 6 points selon la gravité.</li>
+            <li>Maximum de 8 points retirés en cas de cumul d'infractions.</li>
+          </ul>
+          <h3>🔹 Barème des retraits</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Infraction</th>
+                <th>Retrait de points</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Excès de vitesse &lt; 20 km/h</td>
+                <td>1 point</td>
+              </tr>
+              <tr>
+                <td>Excès de vitesse 20-29 km/h</td>
+                <td>2 points</td>
+              </tr>
+              <tr>
+                <td>Excès de vitesse 30-39 km/h</td>
+                <td>3 points</td>
+              </tr>
+              <tr>
+                <td>Excès de vitesse 40-49 km/h</td>
+                <td>4 points + suspension</td>
+              </tr>
+              <tr>
+                <td>Excès de vitesse &gt; 50 km/h</td>
+                <td>6 points + suspension</td>
+              </tr>
+              <tr>
+                <td>Téléphone en main au volant</td>
+                <td>3 points</td>
+              </tr>
+              <tr>
+                <td>Non-respect d'un feu rouge ou stop</td>
+                <td>4 points</td>
+              </tr>
+              <tr>
+                <td>Non-port de la ceinture</td>
+                <td>3 points</td>
+              </tr>
+              <tr>
+                <td>Refus de priorité piéton</td>
+                <td>6 points</td>
+              </tr>
+              <tr>
+                <td>Conduite sous alcool (0,5 à 0,8 g/L)</td>
+                <td>6 points + suspension/annulation</td>
+              </tr>
+              <tr>
+                <td>Conduite sous stupéfiants</td>
+                <td>6 points + suspension/annulation</td>
+              </tr>
+              <tr>
+                <td>Dépassement dangereux</td>
+                <td>3 points</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
 
-      <!-- PERTE TOTALE DU PERMIS / ANNULATION -->
-      <section id="annulation" class="fade-section">
-        <h2>Perte Totale du Permis et Annulation</h2>
-        <p>Si votre solde de points atteint zéro, votre permis est annulé. La procédure de récupération nécessite alors plusieurs démarches administratives.</p>
-        <h3>🔹 Procédure en cas d'annulation</h3>
-        <ul>
-          <li>Restitution du permis dans les 10 jours suivant la réception de la lettre 48SI.</li>
-          <li>Envoi des documents requis : copie de la lettre 48SI, permis original, pièce d’identité, justificatif de domicile et enveloppe affranchie.</li>
-          <li>Réception d’un récépissé qui lance la procédure de récupération.</li>
-        </ul>
-        <h3>🔹 Récupération après annulation</h3>
-        <ul>
-          <li>Délai d’attente : 6 mois minimum en cas de première annulation, 1 an minimum en cas de récidive.</li>
-          <li>Examen médical et tests psychotechniques obligatoires.</li>
-          <li>Repassage du code et/ou de la conduite selon la durée de l’annulation.</li>
-        </ul>
-      </section>
+        <!-- MONTANTS DES AMENDES -->
+        <section id="montant" class="fade-section">
+          <h2>Montants des Amendes et Délais de Paiement</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Classe</th>
+                <th>Type</th>
+                <th>Montant minoré</th>
+                <th>Montant forfaitaire</th>
+                <th>Montant majoré</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1<sup>ère</sup> classe</td>
+                <td>Stationnement</td>
+                <td>11 €</td>
+                <td>17 €</td>
+                <td>33 €</td>
+              </tr>
+              <tr>
+                <td>2<sup>ème</sup> classe</td>
+                <td>Clignotants, Assurances, Péages</td>
+                <td>22 €</td>
+                <td>35 €</td>
+                <td>75 €</td>
+              </tr>
+              <tr>
+                <td>3<sup>ème</sup> classe</td>
+                <td>Excès de vitesse &lt; 20 km/h, Problèmes de freins</td>
+                <td>45 €</td>
+                <td>68 €</td>
+                <td>180 €</td>
+              </tr>
+              <tr>
+                <td>4<sup>ème</sup> classe</td>
+                <td>Toutes autres infractions</td>
+                <td>90 €</td>
+                <td>135 €</td>
+                <td>375 €</td>
+              </tr>
+              <tr>
+                <td>5<sup>ème</sup> classe</td>
+                <td>Excès de vitesse &gt; 50 km/h</td>
+                <td>N/A</td>
+                <td>Décision du tribunal</td>
+                <td>N/A</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            Délais de paiement : minoré sous 15 jours (30 jours en ligne),
+            forfaitaire entre 16 et 45 jours et majoré après 60 jours.
+          </p>
+        </section>
 
-      <!-- RÉCUPÉRATION AUTOMATIQUE DES POINTS -->
-      <section id="recuperation" class="fade-section">
-        <h2>Récupération Automatique des Points</h2>
-        <p>En cas d'absence d'infraction, votre capital se reconstitue automatiquement.</p>
-        <h3>🔹 Mécanismes de récupération</h3>
-        <ul>
-          <li>Récupération d'1 point en 6 mois pour une infraction légère.</li>
-          <li>Récupération totale après 2 ans sans infraction (pour les infractions de 1ère à 3ème classe).</li>
-          <li>Attention : chaque nouvelle infraction remet à zéro la progression de récupération.</li>
-        </ul>
-      </section>
+        <!-- CONTESTATIONS -->
+        <section id="contestations" class="fade-section">
+          <h2>Contestations et Stratégies</h2>
+          <p>
+            Contester une infraction permet de retarder le retrait effectif des
+            points, laissant le temps de suivre un stage de récupération.
+          </p>
+          <h3>🔹 Délais pour contester</h3>
+          <ul>
+            <li>
+              45 jours pour contester une infraction après réception de l'avis.
+            </li>
+            <li>30 jours pour contester une amende majorée.</li>
+          </ul>
+          <h3>🔹 Stratégies efficaces</h3>
+          <ul>
+            <li>
+              Suivre un stage de récupération pour regagner jusqu'à 4 points.
+            </li>
+            <li>
+              Adopter une conduite exemplaire afin de récupérer naturellement
+              des points sur 3 ans.
+            </li>
+            <li>
+              Contester permet parfois de gagner entre 4 et 6 mois avant que le
+              retrait ne soit effectif.
+            </li>
+          </ul>
+        </section>
 
-      <!-- SOLDE DE POINTS -->
-      <section id="solde" class="fade-section" style="display: flex;flex-direction: column;align-items: center;">
-        <h2>Solde de Points</h2>
-        <picture>
-          <source media="(max-width: 768px)" srcset="./images.jpeg">
-          <source media="(min-width: 769px)" srcset="./images.jpeg">
-          <img src="./images.jpeg" alt="Illustration Solde de Points" style="width: auto; height: 300px; margin: 0 auto;">
-        </picture>
-        <p>Consultez régulièrement votre solde afin d'anticiper toute sanction et d'agir en conséquence.</p>
-        <a class="boutique-btn solde-btn" href="https://mespoints.permisdeconduire.gouv.fr/bienvenue" target="_blank">Vérifier mon solde</a>
-      </section>
+        <!-- PERTE TOTALE DU PERMIS / ANNULATION -->
+        <section id="annulation" class="fade-section">
+          <h2>Perte Totale du Permis et Annulation</h2>
+          <p>
+            Si votre solde de points atteint zéro, votre permis est annulé. La
+            procédure de récupération nécessite alors plusieurs démarches
+            administratives.
+          </p>
+          <h3>🔹 Procédure en cas d'annulation</h3>
+          <ul>
+            <li>
+              Restitution du permis dans les 10 jours suivant la réception de la
+              lettre 48SI.
+            </li>
+            <li>
+              Envoi des documents requis : copie de la lettre 48SI, permis
+              original, pièce d’identité, justificatif de domicile et enveloppe
+              affranchie.
+            </li>
+            <li>
+              Réception d’un récépissé qui lance la procédure de récupération.
+            </li>
+          </ul>
+          <h3>🔹 Récupération après annulation</h3>
+          <ul>
+            <li>
+              Délai d’attente : 6 mois minimum en cas de première annulation, 1
+              an minimum en cas de récidive.
+            </li>
+            <li>Examen médical et tests psychotechniques obligatoires.</li>
+            <li>
+              Repassage du code et/ou de la conduite selon la durée de
+              l’annulation.
+            </li>
+          </ul>
+        </section>
 
-      <!-- INFORMATIONS COMPLÉMENTAIRES -->
-      <section id="infos-complementaires" class="fade-section">
-        <h2>Informations Complémentaires</h2>
-        <h3>🔹 Taux légaux</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Substance</th>
-              <th>Taux légal</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Alcool (conducteurs expérimentés)</td>
-              <td>0,5 g/L</td>
-            </tr>
-            <tr>
-              <td>Alcool (nouveaux conducteurs)</td>
-              <td>0,2 g/L</td>
-            </tr>
-            <tr>
-              <td>THC (cannabis)</td>
-              <td>Aucune tolérance</td>
-            </tr>
-            <tr>
-              <td>Autres stupéfiants</td>
-              <td>Dépistage positif = infraction</td>
-            </tr>
-          </tbody>
-        </table>
-        <h3>🔹 Conseils pour rouler en règle</h3>
-        <ul>
-          <li>Être toujours assuré et veiller à la validité du contrôle technique.</li>
-          <li>Entretenir régulièrement son véhicule.</li>
-          <li>Vérifier le niveau de carburant, surtout lors de longs trajets.</li>
-        </ul>
-        <h3>🔹 Sources officielles</h3>
-        <ul>
-          <li><a href="https://www.antai.gouv.fr" target="_blank">ANTAI</a></li>
-          <li><a href="https://www.service-public.fr" target="_blank">Service-Public.fr</a></li>
-          <li><a href="https://www.securite-routiere.gouv.fr" target="_blank">Sécurité Routière</a></li>
-          <li><a href="https://www.legifrance.gouv.fr" target="_blank">Legifrance</a></li>
-          <li><a href="https://www.interieur.gouv.fr" target="_blank">Ministère de l'Intérieur</a></li>
-        </ul>
-      </section>
+        <!-- RÉCUPÉRATION AUTOMATIQUE DES POINTS -->
+        <section id="recuperation" class="fade-section">
+          <h2>Récupération Automatique des Points</h2>
+          <p>
+            En cas d'absence d'infraction, votre capital se reconstitue
+            automatiquement.
+          </p>
+          <h3>🔹 Mécanismes de récupération</h3>
+          <ul>
+            <li>
+              Récupération d'1 point en 6 mois pour une infraction légère.
+            </li>
+            <li>
+              Récupération totale après 2 ans sans infraction (pour les
+              infractions de 1ère à 3ème classe).
+            </li>
+            <li>
+              Récupération totale après 3 ans sans infraction (pour les
+              infractions de 4ème à 5ème classe).
+            </li>
 
-      <!-- ÉTHYLOTTEST -->
-      <section id="ethylotest" class="fade-section" style="text-align: center;">
-        <h2>Éthylotest Électronique Homologué</h2>
-        <img src="./EthylotestElectro.png" alt="Éthylotest Électronique Homologué" style="max-height: 250px; width: auto; margin: 0 auto;">
-        <p>Assurez votre sécurité avec cet éthylotest homologué, indispensable pour vérifier votre taux d'alcoolémie avant de prendre la route.</p>
-        <a href="./produit.html" class="boutique-btn">Voir la fiche produit</a>
-        <div id="paypal-container-KCVKV43WZWW44-wrapper">
-          <div id="paypal-container-KCVKV43WZWW44"></div>
+            <li>
+              Attention : chaque nouvelle infraction remet à zéro la progression
+              de récupération.
+            </li>
+          </ul>
+        </section>
+
+        <!-- SOLDE DE POINTS -->
+        <section
+          id="solde"
+          class="fade-section"
+          style="display: flex; flex-direction: column; align-items: center"
+        >
+          <h2>Solde de Points</h2>
+          <picture>
+            <source media="(max-width: 768px)" srcset="./images.jpeg" />
+            <source media="(min-width: 769px)" srcset="./images.jpeg" />
+            <img
+              src="./images.jpeg"
+              alt="Illustration Solde de Points"
+              style="width: auto; height: 300px; margin: 0 auto"
+            />
+          </picture>
+          <p>
+            Consultez régulièrement votre solde afin d'anticiper toute sanction
+            et d'agir en conséquence.
+          </p>
+          <a
+            class="boutique-btn solde-btn"
+            href="https://mespoints.permisdeconduire.gouv.fr/bienvenue"
+            target="_blank"
+            >Vérifier mon solde</a
+          >
+        </section>
+
+        <!-- INFORMATIONS COMPLÉMENTAIRES -->
+        <section id="infos-complementaires" class="fade-section">
+          <h2>Informations Complémentaires</h2>
+          <h3>🔹 Taux légaux</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Substance</th>
+                <th>Taux légal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Alcool (conducteurs expérimentés)</td>
+                <td>0,5 g/L</td>
+              </tr>
+              <tr>
+                <td>Alcool (nouveaux conducteurs)</td>
+                <td>0,2 g/L</td>
+              </tr>
+              <tr>
+                <td>THC (cannabis)</td>
+                <td>Aucune tolérance</td>
+              </tr>
+              <tr>
+                <td>Autres stupéfiants</td>
+                <td>Dépistage positif = infraction</td>
+              </tr>
+            </tbody>
+          </table>
+          <h3>🔹 Conseils pour rouler en règle</h3>
+          <ul>
+            <li>
+              Être toujours assuré et veiller à la validité du contrôle
+              technique.
+            </li>
+            <li>Entretenir régulièrement son véhicule.</li>
+            <li>
+              Vérifier le niveau de carburant, surtout lors de longs trajets.
+            </li>
+          </ul>
+          <h3>🔹 Sources officielles</h3>
+          <ul>
+            <li>
+              <a href="https://www.antai.gouv.fr" target="_blank">ANTAI</a>
+            </li>
+            <li>
+              <a href="https://www.service-public.fr" target="_blank"
+                >Service-Public.fr</a
+              >
+            </li>
+            <li>
+              <a href="https://www.securite-routiere.gouv.fr" target="_blank"
+                >Sécurité Routière</a
+              >
+            </li>
+            <li>
+              <a href="https://www.legifrance.gouv.fr" target="_blank"
+                >Legifrance</a
+              >
+            </li>
+            <li>
+              <a href="https://www.interieur.gouv.fr" target="_blank"
+                >Ministère de l'Intérieur</a
+              >
+            </li>
+          </ul>
+        </section>
+
+        <!-- ÉTHYLOTTEST -->
+        <section
+          id="ethylotest"
+          class="fade-section"
+          style="text-align: center"
+        >
+          <h2>Éthylotest Électronique Homologué</h2>
+          <img
+            src="./EthylotestElectro.png"
+            alt="Éthylotest Électronique Homologué"
+            style="max-height: 250px; width: auto; margin: 0 auto"
+          />
+          <p>
+            Assurez votre sécurité avec cet éthylotest homologué, indispensable
+            pour vérifier votre taux d'alcoolémie avant de prendre la route.
+          </p>
+          <a href="./produit.html" class="boutique-btn"
+            >Voir la fiche produit</a
+          >
+          <div id="paypal-container-KCVKV43WZWW44-wrapper">
+            <div id="paypal-container-KCVKV43WZWW44"></div>
+          </div>
+        </section>
+
+        <!-- CONCLUSION & CONTACT -->
+        <section id="conclusion" class="fade-section">
+          <h2>Conclusion</h2>
+          <p>
+            Le permis à points est un outil essentiel pour responsabiliser les
+            conducteurs. Une bonne gestion de son capital, la contestation
+            judicieuse et l'adoption d'une conduite exemplaire sont les clés
+            pour préserver votre permis.
+          </p>
+          <p><strong>Un permis bien géré est un permis préservé !</strong></p>
+        </section>
+        <section id="contact" class="fade-section">
+          <h2>Contact</h2>
+          <p>
+            Pour toute question ou information complémentaire, consultez les
+            sites officiels suivants :
+            <a href="https://www.service-public.fr" target="_blank"
+              >Service-Public.fr</a
+            >, <a href="https://www.antai.gouv.fr" target="_blank">ANTAI</a> ou
+            <a href="https://www.securite-routiere.gouv.fr" target="_blank"
+              >Sécurité Routière</a
+            >.
+          </p>
+          <p>
+            Vous pouvez également nous contacter par email à l'adresse suivante
+            :
+            <a href="mailto:contact@permisapoint.info"
+              >contact@permisapoint.info</a
+            >
+          </p>
+        </section>
+        <div class="footer-liens-utiles" style="margin-top: 10px;">
+          <a href="./liensutils.html" class="boutique-btn">Liens Utiles</a>
         </div>
-       
-      </section>
-
-      <!-- CONCLUSION & CONTACT -->
-      <section id="conclusion" class="fade-section">
-        <h2>Conclusion</h2>
-        <p>Le permis à points est un outil essentiel pour responsabiliser les conducteurs. Une bonne gestion de son capital, la contestation judicieuse et l'adoption d'une conduite exemplaire sont les clés pour préserver votre permis.</p>
-        <p><strong>Un permis bien géré est un permis préservé !</strong></p>
-      </section>
-      <section id="contact" class="fade-section">
-        <h2>Contact</h2>
-        <p>Pour toute question ou information complémentaire, consultez les sites officiels suivants : 
-          <a href="https://www.service-public.fr" target="_blank">Service-Public.fr</a>,
-          <a href="https://www.antai.gouv.fr" target="_blank">ANTAI</a> ou 
-          <a href="https://www.securite-routiere.gouv.fr" target="_blank">Sécurité Routière</a>.
-        </p>
-      </section>
-    </main>
-  </div>
-
-  <!-- Sticky CTA pour l'éthylotest -->
-  <div id="sticky-ethylotest">
-    <h3>Éthylotest Électronique</h3>
-    <img src="./EthylotestElectro.png" alt="Éthylotest Électronique Homologué">
-    <a href="./produit.html" class="boutique-btn">Voir la fiche produit</a>
-  </div>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>&copy; 2025 - Le Permis à Points en France</p>
-    <div class="footer-links">
-      <a href="mailto:contact@exemple.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
-      <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-      <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-      <a href="#" title="Boutique en ligne"><i class="fa-solid fa-store"></i></a>
+      </main>
     </div>
-  </footer>
 
-  <!-- Bouton Retour en haut -->
-  <button id="back-to-top">Haut de page</button>
+    <!-- Sticky CTA pour l'éthylotest -->
+    <div id="sticky-ethylotest">
+      <h3>Éthylotest Électronique</h3>
+      <img
+        src="./EthylotestElectro.png"
+        alt="Éthylotest Électronique Homologué"
+      />
+      <a href="./produit.html" class="boutique-btn">Voir la fiche produit</a>
+    </div>
 
-  <!-- JAVASCRIPT -->
-  <script src="https://static.elfsight.com/platform/platform.js" async></script>
-  <script src="https://www.paypal.com/sdk/js?client-id=BAAa_O21kFEVqYTUuqM8z3Gv12qLlWQpAa_Yxj-o8d2H2QkqPjJ1jRWrFHNOXiAm-15rnW4tptdRyGP4Ro&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
-  <script>
-    paypal.HostedButtons({
-      hostedButtonId: "KCVKV43WZWW44",
-    }).render("#paypal-container-KCVKV43WZWW44");
-  </script>
-  <script>
-    // Activation du menu mobile
-    const menuToggle = document.getElementById("mobile-menu-toggle");
-    const mainNav = document.getElementById("main-nav");
-    menuToggle.addEventListener("click", function() {
-      mainNav.classList.toggle("active");
-      menuToggle.classList.toggle("open");
-    });
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>&copy; 2025 - Le Permis à Points en France</p>
+      <div class="footer-links">
+        <a href="mailto:contact@exemple.com" title="Email"
+          ><i class="fa-solid fa-envelope"></i
+        ></a>
+        <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" title="Boutique en ligne"
+          ><i class="fa-solid fa-store"></i
+        ></a>
+         <!-- Bouton vers la page CGV -->
+    <div class="footer-cgv" style="margin-top: 10px;">
+      <a href="cgv.html" class="boutique-btn">CGV</a>
+    </div>
+      </div>
+    </footer>
 
-    // Effet de fondu lors du défilement
-    document.addEventListener("DOMContentLoaded", function() {
-      const faders = document.querySelectorAll(".fade-section");
-      const appearOptions = {
-        threshold: 0.2,
-        rootMargin: "0px 0px -50px 0px",
-      };
-      const appearOnScroll = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
+    <!-- Bouton Retour en haut -->
+    <button id="back-to-top">Haut de page</button>
+
+    <!-- JAVASCRIPT -->
+    <script
+      src="https://static.elfsight.com/platform/platform.js"
+      async
+    ></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=BAAa_O21kFEVqYTUuqM8z3Gv12qLlWQpAa_Yxj-o8d2H2QkqPjJ1jRWrFHNOXiAm-15rnW4tptdRyGP4Ro&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
+    <script>
+      paypal
+        .HostedButtons({
+          hostedButtonId: "KCVKV43WZWW44",
+        })
+        .render("#paypal-container-KCVKV43WZWW44");
+    </script>
+    <script>
+      // Activation du menu mobile
+      const menuToggle = document.getElementById("mobile-menu-toggle");
+      const mainNav = document.getElementById("main-nav");
+      menuToggle.addEventListener("click", function () {
+        mainNav.classList.toggle("active");
+        menuToggle.classList.toggle("open");
+      });
+
+      // Effet de fondu lors du défilement
+      document.addEventListener("DOMContentLoaded", function () {
+        const faders = document.querySelectorAll(".fade-section");
+        const appearOptions = {
+          threshold: 0.2,
+          rootMargin: "0px 0px -50px 0px",
+        };
+        const appearOnScroll = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          });
+        }, appearOptions);
+        faders.forEach((fader) => appearOnScroll.observe(fader));
+      });
+
+      // Bouton "Retour en haut"
+      window.addEventListener("scroll", function () {
+        const backToTopBtn = document.getElementById("back-to-top");
+        backToTopBtn.style.display =
+          window.pageYOffset > 300 ? "block" : "none";
+      });
+      document
+        .getElementById("back-to-top")
+        .addEventListener("click", function () {
+          window.scrollTo({ top: 0, behavior: "smooth" });
         });
-      }, appearOptions);
-      faders.forEach((fader) => appearOnScroll.observe(fader));
-    });
-
-    // Bouton "Retour en haut"
-    window.addEventListener("scroll", function() {
-      const backToTopBtn = document.getElementById("back-to-top");
-      backToTopBtn.style.display = window.pageYOffset > 300 ? "block" : "none";
-    });
-    document.getElementById("back-to-top").addEventListener("click", function() {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  </script>
-</body>
+    </script>
+  </body>
 </html>
