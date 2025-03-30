@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
+    <!-- Encodage, compatibilité et responsive -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Meta description optimisée pour le SEO -->
+
+    <!-- Balises SEO principales -->
     <meta
       name="description"
-      content="Découvrez le permis à point en 2025 en France, ses règles, astuces et sanctions renforcées. Informez-vous sur les situations du permis classique et probatoire, la reconstitution du capital de points, et bien plus encore."
+      content="Guide complet sur le permis à points en 2025 en France : règles, astuces, sanctions et conseils pour rouler en toute sécurité. Préservez votre permis grâce à nos informations pratiques."
     />
+    <meta name="keywords" content="permis à points, permis 2025, sécurité routière, infraction, récupération de points, sanctions, guide permis" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="RMS" />
+    <link rel="canonical" href="https://permisapoint.info/index.html" />
+
+    <!-- Open Graph (pour les réseaux sociaux) -->
+    <meta property="og:title" content="Le permis à points en 2025 en France – Guide complet et astuces" />
+    <meta property="og:description" content="Découvrez tout sur le permis à points en 2025 : fonctionnement, sanctions, récupération automatique et conseils pour rouler en sécurité." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://permisapoint.info/index.html" />
+    <meta property="og:image" content="https://permisapoint.info/permis-dematerialise.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Le permis à points en 2025 en France – Guide complet et astuces" />
+    <meta name="twitter:description" content="Guide complet sur le permis à points en 2025 : découvrez les règles, sanctions et conseils pour préserver votre permis." />
+    <meta name="twitter:image" content="https://permisapoint.info/permis-dematerialise.jpg" />
+
     <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="./favicon.png" type="image/x-icon" />
     <!-- Google Fonts: Roboto -->
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
@@ -23,7 +43,67 @@
     <title>Le permis à point en 2025 en France</title>
     <!-- Fichier CSS externe -->
     <link rel="stylesheet" href="./style.css" />
+  
+   <!-- JSON-LD Structured Data pour la FAQ -->
+   <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "J’ai eu mon permis il y a 8 mois et je viens de commettre une petite infraction. Vais-je perdre mes 6 points ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non, une infraction mineure (ex. : excès de vitesse < 20 km/h) ne retire qu’1 point. La progression vers 12 points est interrompue pendant 3 ans à partir de cette infraction."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mon capital est à 10 points depuis 2 ans, est-ce que je vais revenir automatiquement à 12 ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, si aucune infraction n'est commise pendant 2 ans, le solde revient automatiquement à 12 points."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "J’ai grillé un feu rouge et je parlais au téléphone. Combien de points vais-je perdre ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le non-respect d’un feu rouge coûte 4 points et l’usage du téléphone 3 points, soit 7 points au total."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Je me suis fait flasher à 52 km/h dans une zone limitée à 50. Vais-je perdre des points ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Si la marge technique est appliquée, aucune infraction ne sera retenue et aucun point ne sera perdu."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "J’ai reçu une amende de 135 € pour stationnement dangereux. Si je paie tout de suite, est-ce moins cher ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, en payant dans les 15 jours, le tarif minoré est de 90 € au lieu de 135 €."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "J’ai oublié de payer une amende. Que se passe-t-il ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Si le délai de paiement est dépassé (45 jours), le montant majoré s'applique, par exemple 375 € au lieu de 135 €."
+          }
+        }
+      ]
+    }
+  </script>
+  <!-- Fin du JSON-LD -->
   </head>
+
 
   <body>
     <!-- HEADER -->
@@ -941,10 +1021,7 @@
       });
     </script>
 
-    <script
-      src="https://static.elfsight.com/platform/platform.js"
-      async
-    ></script>
+    <!-- PayPal SDK -->
     <script src="https://www.paypal.com/sdk/js?client-id=BAAa_O21kFEVqYTUuqM8z3Gv12qLlWQpAa_Yxj-o8d2H2QkqPjJ1jRWrFHNOXiAm-15rnW4tptdRyGP4Ro&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
     <script>
       paypal
