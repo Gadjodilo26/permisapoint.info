@@ -37,15 +37,29 @@
       <section id="produit-intro" class="fade-section" style="display:flex ;flex-direction: column; align-items: center;justify-content: center;">
         <h1>Éthylotest Électronique Homologué</h1>
         <picture>
-          <source media="(max-width: 768px)" srcset="./EthylotestElectro.png">
-          <source media="(min-width: 769px)" srcset="./EthylotestElectro.png">
-          <img src="./EthylotestElectro.png" alt="Éthylotest Électronique Homologué" style="height: 300px; width: auto; margin: auto; align-items: center; justify-content: center;">
+          <source media="(max-width: 768px)" srcset="./img/Ethylotest-electronique-homologué-NF.png">
+          <source media="(min-width: 769px)" srcset="./img/Ethylotest-electronique-homologué-NF.png">
+          <img src="./img/Ethylotest-electronique-homologué-NF.png" alt="Éthylotest Électronique Homologué" style="height: 300px; width: auto; margin: auto; align-items: center; justify-content: center;">
         </picture>
         <p>
           Assurez votre sécurité sur la route grâce à notre éthylotest électronique homologué. Ce dispositif précis, facile à utiliser et conforme aux normes en vigueur vous permet de vérifier rapidement votre taux d'alcoolémie avant de prendre le volant.
         </p>
-        <a href="#achat" class="boutique-btn">Acheter Maintenant</a>
+        <a href="https://www.amazon.fr/dp/B0DRVYZQHH/?tag=gadyudid-21" class="boutique-btn">Voir le produit sur Amazon</a>
       </section>
+
+      <!-- SECTION: CAROUSEL -->
+<section id="carousel" class="carousel-section fade-section">
+  <div class="carousel-container">
+    <div class="carousel-slide">
+      <img src="./img/Slide1.jpg" alt="Vue de face de l'éthylotest">
+      <img src="./img/Slide2.jpg" alt="Vue latérale de l'éthylotest">
+      <img src="./img/Slide3.jpg" alt="Vue arrière de l'éthylotest">
+    </div>
+    <button class="carousel-btn prev-btn" aria-label="Image précédente">&#10094;</button>
+    <button class="carousel-btn next-btn" aria-label="Image suivante">&#10095;</button>
+  </div>
+</section>
+
 
       <!-- SECTION: CARACTÉRISTIQUES -->
       <section id="caracteristiques" class="fade-section">
@@ -86,14 +100,14 @@
         </ol>
       </section>
 
-      <!-- SECTION: ACHAT -->
+      <!-- SECTION: ACHAT 
       <section id="achat" class="fade-section" style="text-align: center;">
         <h2>Procédez à l'Achat</h2>
         <p>Ne prenez aucun risque sur la route. Achetez dès maintenant votre éthylotest électronique homologué et roulez en toute sécurité !</p>
         <div id="paypal-container-KCVKV43WZWW44-wrapper">
           <div id="paypal-container-KCVKV43WZWW44"></div>
         </div>
-      </section>
+      </section>-->
 
       <!-- SECTION: INFORMATIONS COMPLÉMENTAIRES -->
       <section id="infos" class="fade-section">
@@ -119,7 +133,7 @@
   <footer>
     <p>&copy; 2025 Permis à Points. Tous droits réservés.</p>
     <div class="footer-links">
-      <a href="./cgv.html">Conditions générales de vente</a>
+      <a href="./partenariat-amazon.html">Amazon Affiliation</a>
      
     </div>
   </footer>
@@ -170,6 +184,37 @@
     document.getElementById("back-to-top").addEventListener("click", function() {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
+    
+    document.addEventListener("DOMContentLoaded", function() {
+  const slide = document.querySelector('.carousel-slide');
+  const images = document.querySelectorAll('.carousel-slide img');
+  const prevBtn = document.querySelector('.prev-btn');
+  const nextBtn = document.querySelector('.next-btn');
+  let counter = 0;
+  const updateSize = () => images[0].clientWidth;
+  let size = updateSize();
+
+  // Position initiale
+  slide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+
+  nextBtn.addEventListener('click', () => {
+    if(counter >= images.length - 1) return;
+    counter++;
+    slide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+  });
+
+  prevBtn.addEventListener('click', () => {
+    if(counter <= 0) return;
+    counter--;
+    slide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+  });
+
+  // Mettre à jour la taille lors du redimensionnement de la fenêtre
+  window.addEventListener('resize', () => {
+    size = updateSize();
+    slide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+  });
+});
   </script>
 </body>
 </html>

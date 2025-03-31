@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- Encodage et responsive -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Balises SEO -->
+  <meta name="description" content="En tant que partenaire Amazon, Permis à Points perçoit une commission sur les achats éligibles réalisés via nos liens affiliés. Découvrez notre rôle, nos obligations légales et notre engagement en matière de transparence.">
+  <meta name="keywords" content="partenaire amazon, affiliation amazon, amazon associates, transparence, conformité légale, permis à points">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.permisapoint.info/partenariat-amazon.html">
+
+  <!-- Open Graph pour réseaux sociaux -->
+  <meta property="og:title" content="Partenariat Amazon – Transparence et Conformité | Permis à Points">
+  <meta property="og:description" content="Découvrez comment Permis à Points, en tant que partenaire Amazon, respecte les exigences du programme Amazon Associates en matière de transparence et de conformité légale.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.permisapoint.info/partenariat-amazon.html">
+  <meta property="og:image" content="https://www.permisapoint.info/images/amazon-partner.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Partenariat Amazon – Transparence et Conformité | Permis à Points">
+  <meta name="twitter:description" content="En tant que partenaire Amazon, nous percevons une commission sur les achats via nos liens affiliés. Informez-vous sur notre rôle et nos engagements légaux.">
+  <meta name="twitter:image" content="https://www.permisapoint.info/images/amazon-partner.jpg">
+
+  <!-- Titre de la page -->
+  <title>Partenariat Amazon – Transparence et Conformité | Permis à Points</title>
+
+  <!-- Import de la police moderne Roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Feuille de style principale -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="logo.png" alt="Logo du Permis à Points"></a>
+    </div>
+  </header>
+
+  <!-- CONTENU PRINCIPAL -->
+  <main class="container">
+    <section class="content-section fade-section">
+      <h1>Notre Rôle en Tant que Partenaire Amazon</h1>
+      <p>
+        Chez Permis à Points, nous participons au programme Amazon Associates. Cela signifie que nous percevons une commission sur les achats éligibles effectués via nos liens affiliés, sans frais supplémentaires pour vous.
+      </p>
+
+      <h2>Divulgation Obligatoire</h2>
+      <p>
+        Conformément aux exigences d'Amazon Associates et aux lois en vigueur, nous vous informons de manière claire que <strong>nous percevons une commission</strong> sur les achats réalisés via nos liens affiliés. Cette commission nous aide à financer le maintien et l'amélioration de notre contenu.
+      </p>
+
+      <h2>Respect des Règles de Publication</h2>
+      <p>
+        Nos liens affiliés sont intégrés exclusivement dans des pages contextuelles en rapport direct avec le contenu présenté. Ils ne sont pas utilisés dans des e-mails, newsletters, SMS ou publicités payantes. Par ailleurs, nous n'utilisons pas de raccourcisseurs de liens qui masqueraient l'origine de nos liens.
+      </p>
+
+      <h2>Conformité Technique</h2>
+      <p>
+        Pour respecter les recommandations d'Amazon, tous nos liens affiliés incluent l'attribut <code>rel="nofollow"</code>. Cet attribut permet aux moteurs de recherche de reconnaître qu'il s'agit de liens sponsorisés, garantissant ainsi une bonne indexation de notre site.
+      </p>
+
+      <h2>Respect des Lois Locales</h2>
+      <p>
+        Nous nous engageons à respecter le Règlement Général sur la Protection des Données (RGPD) ainsi que toutes les lois locales applicables. Nous informons nos visiteurs de l'utilisation des cookies et de la collecte de données personnelles dans le cadre de nos activités d'affiliation.
+      </p>
+
+      <h2>Notre Engagement</h2>
+      <p>
+        Nous nous engageons à maintenir une transparence totale concernant notre partenariat avec Amazon. Notre objectif est de vous offrir des informations de qualité et une expérience utilisateur optimale, tout en respectant strictement les conditions du programme Amazon Associates.
+      </p>
+
+      <p>
+        Pour toute question ou information complémentaire, veuillez nous contacter à l'adresse <a href="mailto:contact@permisapoint.info">contact@permisapoint.info</a>.
+      </p>
+      
+      <p style="text-align: center; margin-top: 30px;">
+        Date de mise à jour : Avril 2025
+      </p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2025 - Permis à Points. Tous droits réservés.</p>
+    <div class="footer-links">
+      <a href="mailto:contact@permisapoint.info" title="Contact"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+  </footer>
+
+  <button id="back-to-top">Haut de page</button>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    // Bouton "Retour en haut"
+    window.addEventListener("scroll", function() {
+      const backToTopBtn = document.getElementById("back-to-top");
+      backToTopBtn.style.display = window.pageYOffset > 300 ? "block" : "none";
+    });
+    document.getElementById("back-to-top").addEventListener("click", function() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // Effet de fondu pour les sections lors du défilement
+    document.addEventListener("DOMContentLoaded", function() {
+      const faders = document.querySelectorAll(".fade-section");
+      const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
+      const appearOnScroll = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        });
+      }, appearOptions);
+      faders.forEach(fader => appearOnScroll.observe(fader));
+    });
+  </script>
+</body>
+</html>
